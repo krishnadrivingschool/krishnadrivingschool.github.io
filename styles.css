@@ -1,0 +1,318 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9; /* Light gray background */
+}
+
+/* Header Styles */
+header h1 {
+    font-size: 2.5rem;
+    color: #FF5722; /* Orange color for the title */
+    margin: 0;
+    font-weight: 500;
+    display: flex; /* Use flexbox to align the title and hamburger icon */
+    align-items: center; /* Vertically align the items */
+    justify-content: space-between; /* Push the hamburger icon to the right */
+}
+
+.nav-toggle {
+    display: none; /* Hidden by default */
+    background: none;
+    border: none;
+    font-size: 1.8rem; /* Slightly larger for better visibility */
+    cursor: pointer;
+    color: #333;
+    margin-left: auto; /* Push the icon to the far right */
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #FF5722; /* Orange for section titles */
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+p, li {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #555; /* Softer text color for readability */
+}
+
+header a {
+    color: #FF5722; /* Orange for links */
+    text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    padding: 0.4rem 0.8rem; /* Slightly larger padding for a more prominent button look */
+    border-radius: 8px; /* More rounded corners for a modern button effect */
+    font-weight: bold; /* Bold text for better emphasis */
+    display: inline-block; /* Ensures proper button-like appearance */
+    text-align: center; /* Centers text inside the button */
+    border: none; /* Removes borders for a cleaner look */
+}
+
+header a:hover {
+    color: #FF5722; /* Orange text on hover */
+    background-color: #FFE0B2; /* Light orange background on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), inset 0 4px 6px rgba(0, 0, 0, 0.1); /* Enhanced shadow for a more realistic effect */
+    border-radius: 12px; /* Rounded borders for a smoother button look */
+    transform: translateY(-3px); /* Slight lift effect on hover */
+}
+
+/* Header Styles */
+header {
+    background: #FFE0B2; /* Light orange background for header */
+    color: #333;
+    padding: 1rem 0;
+    text-align: center;
+    position: sticky;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    text-align: center;
+    justify-content: center; /* Center the navigation bar content */
+    margin: 0;
+    font-weight: bold; /* Make the text bold */
+}
+
+header .tagline {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: #555; /* Softer gray for tagline */
+}
+
+/* Navigation Styles */
+nav {
+    position: relative;
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Center the navigation bar content */
+    padding: 0 1rem; /* Add padding to the navigation bar */
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    color: #333;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #FFE0B2; /* Light orange hover effect */
+}
+
+/* Responsive Design for Navigation */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block; /* Show hamburger menu on smaller screens */
+    }
+
+    header h1 {
+        font-size: 2rem; /* Adjust title size for smaller screens */
+    }
+
+    .nav-links {
+        display: none; /* Hide navigation links by default */
+        flex-direction: column; /* Stack links vertically */
+        background-color: #FFE0B2; /* Light orange background for dropdown */
+        position: absolute;
+        top: 100%; /* Position below the navigation bar */
+        right: 0;
+        left: 0;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .nav-links.show {
+        display: flex; /* Show navigation links when toggled */
+    }
+
+    .nav-links a {
+        padding: 0.8rem 1rem; /* Increase padding for better touch targets */
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Main Content Styles */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: auto auto; /* 2 rows */
+    gap: 2rem; /* Space between sections */
+    margin: 0 auto; /* Center the grid */
+    max-width: 1200px; /* Limit the grid width for readability */
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
+.vertical-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 1.5rem; /* Space between the sections */
+    margin: 0 auto; /* Center the container */
+    width: 100%; /* Full width of the container */
+    box-sizing: border-box; /* Include padding in width calculations */
+    flex-grow: 1; /* Allow the container to take maximum available space */
+}
+
+.vertical-container section {
+    background: #ffffff; /* White background for sections */
+    border: 1px solid #ddd; /* Light border for separation */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    box-sizing: border-box;
+}
+
+main {
+    padding: 1.5rem; /* Increased padding for better spacing */
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted min width for better responsiveness */
+    gap: 1.5rem; /* Increased gap for better spacing between items */
+}
+
+section {
+    background: #ffffff; /* White background for sections */
+    padding: 1.5rem; /* Padding inside sections */
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Rounded corners for a modern look */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    box-sizing: border-box;
+}
+
+section h2 {
+    margin-bottom: 1rem; /* Increased margin for better spacing */
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    background: #FAFAFA; /* Very light gray for table background */
+    color: #333; /* Dark text for readability */
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+table th {
+    background-color: #FFE0B2; /* Light orange for table headers */
+    color: #333;
+}
+
+table tr:nth-child(even) {
+    background-color: #FFF3E0; /* Very light orange for alternating rows */
+}
+
+/* Footer Styles */
+footer {
+    background: #48322a; /* Neutral orange for footer */
+    color: #ffffff; /* Light gray for text for better contrast */
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 1rem;
+}
+
+footer p {
+    color: #ffffff; /* Light gray for text for better contrast */
+}
+
+footer a {
+    color: #FF5722; /* Orange for footer links */
+    text-decoration: none;
+    font-weight: bold; /* Slightly bold for emphasis */
+}
+
+footer a:hover {
+    text-decoration: bold;
+    color: #E64A19; /* Darker orange on hover for better visibility */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+    }
+
+    header h1 {
+        font-size: 2rem; /* Adjust title size for smaller screens */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Adjust section title size */
+    }
+
+    p, li {
+        font-size: 1rem; /* Adjust text size */
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .grid-container {
+        gap: 1rem; /* Reduce gap between sections */
+    }
+
+    section {
+        padding: 1rem; /* Reduce padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem; /* Further reduce title size */
+    }
+
+    h2 {
+        font-size: 1.3rem; /* Further reduce section title size */
+    }
+
+    p, li {
+        font-size: 0.9rem; /* Further reduce text size */
+    }
+
+    .grid-container {
+        padding: 0.5rem; /* Reduce padding around the grid */
+    }
+
+    section {
+        padding: 0.8rem; /* Reduce padding inside sections */
+    }
+}
